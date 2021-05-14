@@ -1,0 +1,82 @@
+{
+    "id": "LeaveForm",
+    "schemaVersion": "1.1.0",
+    "name": "Leave_Approval_Form",
+    "revision": "1.0",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "requestor_details",
+            "type": "section",
+            "title": "Requestor Details",
+            "content": [
+                {
+                    "id": "full_name",
+                    "type": "string",
+                    "label": "Full Name",
+                    "readOnly": true,
+                    "value": "${context.Requester.Name}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "email_id",
+                    "type": "string",
+                    "label": "Email Id",
+                    "readOnly": true,
+                    "value": "${context.Requester.Email}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        },
+        {
+            "id": "leave_details",
+            "type": "section",
+            "title": "Leave Details",
+            "content": [
+                {
+                    "id": "total_days",
+                    "type": "integer",
+                    "label": "Total Days",
+                    "readOnly": true,
+                    "value": "${context.Details.TotalDays}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "reason",
+                    "type": "string",
+                    "label": "Reason",
+                    "readOnly": true,
+                    "value": "${context.Details.Reason}",
+                    "control": {
+                        "type": "TextArea",
+                        "properties": {
+                            "height": "small"
+                        }
+                    },
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        }
+    ],
+    "decisions": [
+        {
+            "id": "accept",
+            "text": "Accept",
+            "decisionType": "positive"
+        },
+        {
+            "id": "reject",
+            "text": "Reject",
+            "decisionType": "negative"
+        }
+    ]
+}

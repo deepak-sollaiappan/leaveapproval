@@ -1,0 +1,17 @@
+_schema-version: "3.2"
+ID: leaveapproval
+version: 0.0.1
+modules:
+- name: leaveapproval
+  type: com.sap.application.content
+  path: leaveapproval
+  requires:
+  - name: workflow_mta
+    parameters:
+      content-target: true
+resources:
+- name: workflow_mta
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: workflow
+    service-plan: lite

@@ -1,0 +1,20 @@
+{
+    "RequestId": "LEAVE_REQ_00_000",
+    "Title": "Leave Approval",
+    "Requester": {
+        "Name":"John Dilbert",
+        "Email": "john.dilbert@techmahindra.com",
+        "UserId":"P000000",
+        "Comment":"Please approve the leave"
+    },
+    "Investment": {
+        "TotalCost": 1,
+        "Type": "Software",
+
+        "Division":"INOR",
+        "ROI": 5,
+        "Country": "India",
+        "Currency": "EUR",
+        "Description": "Emergency"
+    }
+}
